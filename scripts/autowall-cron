@@ -1,0 +1,5 @@
+#!/bin/sh
+
+AUTOWALL_DIR=/opt/autowall/
+cd $AUTOWALL_DIR
+./autowall >> /opt/autowall/autowall.log
