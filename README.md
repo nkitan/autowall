@@ -20,6 +20,6 @@ Windows allows users to set a slideshow as their wallpaper. This picks up a rand
    ```/opt/autowall/autowall```  
 
 ### Automate
-To make this run every day, place the scripts/autowall-cron file inside /etc/cron.daily
-or
-set up autowall to run every day using cron manually
+To make this run every day, place the scripts/autowall-cron file inside /etc/cron.daily  
+or  
+set up scripts/autowall-cron to run every day using cron manually
