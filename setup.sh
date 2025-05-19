@@ -14,7 +14,7 @@ cp -f -r target/debug/autowall autowall.env scripts/ $SETUP_DIR/
 
 # Grant permissions
 echo "Setting Up Permissions.."
-sudo chown -R nkitan:nkitan $SETUP_DIR
+sudo chown -R <USER>:<USER> $SETUP_DIR
 sudo chmod +x $SETUP_DIR/autowall
 
 echo "Setup is complete"

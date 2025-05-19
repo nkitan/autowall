@@ -1,8 +1,8 @@
 #!/bin/bash
 #
-# place wallpapers in C:/Users/<USERNAME>/Pictures/Wallpapers/ directorires
+# place wallpapers in C:/Users/<USERNAME>/Pictures/Wallpapers/ directory
 
-DEST=/mnt/c/Users/nkitan/Pictures/Wallpapers/
+DEST=/mnt/c/Users/<USER>/Pictures/Wallpapers/
 SRC=/opt/autowall/wallpapers/
 
 cp $SRC/* $DEST/
