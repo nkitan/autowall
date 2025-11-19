@@ -12,9 +12,9 @@ Autowall fetches and stores wallpapers from unsplash and stores it in a folder w
 ## Requirements
 - Rust (see `Cargo.toml` for dependencies)
 - Unsplash API key
-- Any Linux (for dual-boot systems) / WSL Distro (Windows Subsystem for Linux)
+- Any Linux System (for dual-boot systems) / WSL Distro (Windows Subsystem for Linux)
 
-## Usage - fow Dual boot / WSL setups
+## Usage - for Dual boot / WSL setups
 1. **Clone the repo**
    ```sh
    git clone git@github.com:nkitan/autowall.git
@@ -66,4 +66,6 @@ Or set up your own cron job to run `/opt/autowall/autowall` as needed.
 - `scripts/place.sh`: Copies wallpapers to Windows folder.
 - `scripts/autowall-cron`: Example cron script.
 - `autowall.env.template`: Example environment config.
+
+Please note that wallpapers will be updated when linux is running, if linux was not run even once, say in case of dual boot, then autowall would not have been run and as a result no new wallpapers will be added
 ---
