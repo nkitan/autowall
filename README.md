@@ -1,6 +1,6 @@
 # Autowall
 Autowall is a simple Rust program to fetch wallpapers from Unsplash and provide them to Windows for use as slideshow backgrounds.
-Windows allows users to set a slideshow as their wallpaper, picking a random picture from a specified folder.
+Windows allows users to set a slideshow as their wallpaper, picking a random picture from a specified folder. Autowall is tested on WSL and it fetches and stores wallpapers from unsplash and provides it to windows.
 
 ## Features
 - Fetches random wallpapers from Unsplash using a configurable query.
@@ -32,10 +32,11 @@ Windows allows users to set a slideshow as their wallpaper, picking a random pic
    vim autowall.env
    ```
    Fill in your Unsplash API key and other settings.
-5. **Use autowall**
+5. **Use autowall** to fetch a new wallpaper
    ```sh
    /opt/autowall/autowall
    ```
+6. Set Windows to pick up wallpapers from C:/Users/<USERNAME>/Pictures/Wallpapers/
 
 ## Automation
 To run Autowall automatically (e.g., daily):
@@ -61,6 +62,5 @@ Or set up your own cron job to run `/opt/autowall/autowall` as needed.
 ## Requirements
 - Rust (see `Cargo.toml` for dependencies)
 - Unsplash API key
-- Linux environment (tested with WSL for Windows integration)
-
+- Any WSL Distro (Windows Subsystem for Linux)
 ---
