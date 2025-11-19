@@ -1,12 +1,18 @@
 # Autowall
-Autowall is a simple Rust program to fetch wallpapers from Unsplash and provide them to Windows for use as slideshow backgrounds.
-Windows allows users to set a slideshow as their wallpaper, picking a random picture from a specified folder. Autowall is tested on WSL and it fetches and stores wallpapers from unsplash and provides it to windows.
+Autowall is a simple Rust program to fetch wallpapers from Unsplash and provide them to Windows for use as slideshow backgrounds.  
+Windows allows users to set a slideshow as their wallpaper, picking a random picture from a specified folder.  
+Autowall fetches and stores wallpapers from unsplash and stores it in a folder which is picked up by windows.
 
 ## Features
 - Fetches random wallpapers from Unsplash using a configurable query.
 - Downloads wallpapers to a specified directory.
 - Copies wallpapers to your Windows wallpapers folder (for WSL/dual-boot setups).
 - Can be automated via cron.
+
+## Requirements
+- Rust (see `Cargo.toml` for dependencies)
+- Unsplash API key
+- Any Linux (for dual-boot systems) / WSL Distro (Windows Subsystem for Linux)
 
 ## Usage
 1. **Clone the repo**
@@ -22,7 +28,9 @@ Windows allows users to set a slideshow as their wallpaper, picking a random pic
 3. **Configure `scripts/place.sh`**
    Edit the destination and source directories in `scripts/place.sh`:
    ```sh
-   DEST=/mnt/c/Users/<USERNAME>/Pictures/Wallpapers/
+   DEST=/mnt/c/Users/<USERNAME>/Pictures/Wallpapers/ for WSL 
+   or 
+   DEST=/mnt/windows_drive/Users/<USERNAME>/Pictures/Wallpapers/ for dualboot (Please note that for dual boot systems it is assumed that windows install drive is mounted at /mnt/windows_drive)
    SRC=/opt/autowall/wallpapers/
    ```
    Replace `<USERNAME>` with your Windows username.
@@ -58,9 +66,4 @@ Or set up your own cron job to run `/opt/autowall/autowall` as needed.
 - `scripts/place.sh`: Copies wallpapers to Windows folder.
 - `scripts/autowall-cron`: Example cron script.
 - `autowall.env.template`: Example environment config.
-
-## Requirements
-- Rust (see `Cargo.toml` for dependencies)
-- Unsplash API key
-- Any WSL Distro (Windows Subsystem for Linux)
 ---
