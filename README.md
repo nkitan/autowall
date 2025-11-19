@@ -14,7 +14,7 @@ Autowall fetches and stores wallpapers from unsplash and stores it in a folder w
 - Unsplash API key
 - Any Linux (for dual-boot systems) / WSL Distro (Windows Subsystem for Linux)
 
-## Usage
+## Usage - fow Dual boot / WSL setups
 1. **Clone the repo**
    ```sh
    git clone git@github.com:nkitan/autowall.git
